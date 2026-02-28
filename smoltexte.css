@@ -1,0 +1,40 @@
+body{
+font-family: "Courier New", Courier, monospace;
+}
+
+a{
+}
+
+em{
+background: #00F000;
+}
+
+h1{
+}
+
+h2{
+}
+
+h3{
+}
+
+hr{
+}
+
+img{
+}
+
+pre{
+border-style: groove;
+border-color: #808080;
+border-width: 1px;
+}
+
+table{
+border-style: groove;
+border-color: #000000;
+border-width: 2px;
+}
+
+u{
+}
