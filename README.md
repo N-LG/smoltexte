@@ -1,15 +1,14 @@
-#c'est quoi?
+# c'est quoi?
 le smoltexte est une syntaxe particulière du markdown que j'ai définis afin d'avoir une syntaxe simple pour écrire la documentation de mon projet de systeme d'exploitation SeaC
- 
+  
 sur ce dépot se trouve:
-     *[la documentation du format](https://github.com/N-LG/smoltexte/blob/main/smoltext.html)
+     *[la documentation du format](https://github.com/N-LG/smoltexte/blob/main/smoltexte.md)
      *[un script python pour transformer du smoltexte en html](https://github.com/N-LG/smoltexte/blob/main/stx2html.py)
      *[un script python pour transformer du smoltexte en markdown](https://github.com/N-LG/smoltexte/blob/main/stx2md.py)
      *et pas grand chose de plus pour l'instant...
- 
- 
-#pourquoi???
- 
+  
+# pourquoi???
+  
 j'utilisait un format de fichier spécifique pour gérer la documentation et je souhaitai adopter un standard pour gérer la documentation, mes critères pour trouver Le bon:
     * éditable par un éditeur de texte
     * permet de créer des chapitres avec un liens interne
@@ -17,7 +16,7 @@ j'utilisait un format de fichier spécifique pour gérer la documentation et je 
     * legère mise en forme du texte
     * codage acceptant tout les caractère unicode
     * permet d'y inclure des images,son,video
- 
+  
 ne trouvant pas ce dont j'avait besoin j'ai définis cette syntaxe un peu particulière de markdown que je nomme le smoltexte en hommage au smolnet
- 
- 
+  
+  

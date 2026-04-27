@@ -3,11 +3,10 @@
 le smoltexte est une syntaxe particulière du markdown que j'ai définis afin d'avoir une syntaxe simple pour écrire la documentation de mon projet de systeme d'exploitation SeaC
 
 sur ce dépot se trouve:
-> *~la documentation du format|https://github.com/N-LG/smoltexte/blob/main/smoltext.html~
+> *~la documentation du format|https://github.com/N-LG/smoltexte/blob/main/smoltexte.md~
 > *~un script python pour transformer du smoltexte en html|https://github.com/N-LG/smoltexte/blob/main/stx2html.py~
 > *~un script python pour transformer du smoltexte en markdown|https://github.com/N-LG/smoltexte/blob/main/stx2md.py~
 > *et pas grand chose de plus pour l'instant...
-
 
 #pourquoi???
 

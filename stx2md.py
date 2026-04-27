@@ -5,6 +5,10 @@
 import os
 
 def formatligne(ligne_argument):
+    #retire les espaces au début
+    #while ligne_argument[0]==' ':
+    #    ligne_argument = ligne_argument[1:]
+    
     #liens
     ligne_initiale = ligne_argument.split("~")
     ligne_finale = ""
@@ -98,14 +102,14 @@ del(lignes[0])
 #ajoute un caractère pour eviter que les ligne soient vide
 for i in range(len(lignes)):
     if len(lignes[i])==0:
-        lignes[i]=" "
+        lignes[i]="  "
         
 #parcour les ligne pour les transformer
 lastligne=""    
 for i in range(len(lignes)):
 
     #texte standard
-    if lignes[i][0]!=":" and lignes[i][0]!="|" and lignes[i][0]!='"' and lignes[i][0]!="?" and lignes[i][0]!="!":
+    if lignes[i][0]!=":" and lignes[i][0]!="|" and lignes[i][0]!='"' and lignes[i][0]!="?" and lignes[i][0]!="!" and lignes[i][0]!="#":
         fichier_sortie.write(formatligne(indenteligne(lignes[i]))+"\u000D\u000A")
 
     #ignore le premier caractère
@@ -123,7 +127,13 @@ for i in range(len(lignes)):
         nom_image = lignes[i].split("|")[1]
         fichier_sortie.write('!['+alternatif+']('+nom_image+')')
 
-
+    #titre et sous titres
+    if lignes[i][0]=="#"and lignes[i][1]!="#":
+        fichier_sortie.write('# '+formatligne(lignes[i][1:])+"\u000D\u000A")
+    if lignes[i][0]=="#" and lignes[i][1]=="#" and lignes[i][2]!="#" :
+        fichier_sortie.write('## '+formatligne(lignes[i][2:])+"\u000D\u000A")
+    if lignes[i][0]=="#" and lignes[i][1]=="#" and lignes[i][2]=="#" :
+        fichier_sortie.write('### '+formatligne(lignes[i][3:])+"\u000D\u000A")
 
 
     #paragraphe
