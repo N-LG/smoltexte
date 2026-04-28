@@ -15,7 +15,7 @@ def formatligne(ligne_argument):
     for i in range(len(ligne_initiale)):
         if(i%2 != 0):
             if ligne_initiale[i]=="":
-                ligne_finale= ligne_finale + "~"
+                ligne_finale= ligne_finale + "\~"
             else:
                 if "|" in ligne_initiale[i]:
                     nom = ligne_initiale[i].split("|")[0]
@@ -32,7 +32,7 @@ def formatligne(ligne_argument):
     for i in range(len(ligne_initiale)):
         if(i%2 != 0):
             if ligne_initiale[i]=="":
-                ligne_finale= ligne_finale + "_"
+                ligne_finale= ligne_finale + "\_"
             else:
                 ligne_finale = ligne_finale+"<ins>"+ligne_initiale[i]+"</ins>"
         else:
@@ -43,7 +43,7 @@ def formatligne(ligne_argument):
     for i in range(len(ligne_initiale)):
         if(i%2 != 0):
             if ligne_initiale[i]=="":
-                ligne_finale= ligne_finale + "@"
+                ligne_finale= ligne_finale + "\@"
             else:
                 ligne_finale = ligne_finale+"***"+ligne_initiale[i]+"***"
         else:
@@ -129,16 +129,16 @@ for i in range(len(lignes)):
 
     #titre et sous titres
     if lignes[i][0]=="#"and lignes[i][1]!="#":
-        fichier_sortie.write('# '+formatligne(lignes[i][1:])+"\u000D\u000A")
+        fichier_sortie.write(' \u000D\u000A \u000D\u000A \u000D\u000A# '+formatligne(lignes[i][1:])+"\u000D\u000A")
     if lignes[i][0]=="#" and lignes[i][1]=="#" and lignes[i][2]!="#" :
-        fichier_sortie.write('## '+formatligne(lignes[i][2:])+"\u000D\u000A")
+        fichier_sortie.write(' \u000D\u000A \u000D\u000A## '+formatligne(lignes[i][2:])+"\u000D\u000A")
     if lignes[i][0]=="#" and lignes[i][1]=="#" and lignes[i][2]=="#" :
-        fichier_sortie.write('### '+formatligne(lignes[i][3:])+"\u000D\u000A")
+        fichier_sortie.write(' \u000D\u000A### '+formatligne(lignes[i][3:])+"\u000D\u000A")
 
 
     #paragraphe
     if lignes[i][0]=='"' :
-        fichier_sortie.write(">" + formatligne(indenteligne(lignes[i][1:])))
+        fichier_sortie.write(">" + formatligne(indenteligne(lignes[i][1:]))+"\u000D\u000A")
 
 
 

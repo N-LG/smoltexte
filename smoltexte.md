@@ -1,62 +1,91 @@
-  
-j'utilise un format de fichier spécifique pour gérer la documentation et je souhaitai adopter un standard pour gérer la documentation, mes critères pour trouver Le bon:
-    * éditable par un éditeur de texte
-    * permet de créer des chapitres avec un liens interne
-    * liens insérable dans un paragraphe
-    * legère mise en forme du texte
-    * codage acceptant tout les caractère unicode
-    * permet d'y inclure des images,son,video
-  
-  
-  
+ 
+ 
+ 
 #  smoltexte
   
 le smoltexte est principalement organisé en ligne, les marqueur de fin de ligne peut être CR, LF, ou CRLF
 la première ligne est dédié aux métadonnée du fichier, ensuite chaque fonctions d'une ligne est définis par ses premiers caractère
   
   
+ 
+ 
 ##  première ligne
 la première ligne est destiné à avertir du format et à contenir les métadonnée du document, celle ci as le format suivant:
   
->SMLTX;titre;auteur;date dernière modification;version;organisation;date de valididité;  
+>SMLTX;titre;auteur;date dernière modification;version;organisation;date de valididité;
+  
 seule la chaine SMLTX; au début est obligatoire pour indiquer de quel type est le document. Les dates sont au format YYYY-MM-JJ ou YYYY-MM-JJThh:mm:ss.ms suivant le jour et l'heure UTC 
   
+ 
+ 
 ##  marques en début de ligne
-###  # à ###
-titre a sous titre (façon gemtext)
-###  |
-tableau (façon markdown)
-###  !
-fichier multimédia    !texte alternatif|url du fichier (un navigateur qui ne supporte pas le type du fichier affichera un lien pour le télécharger)
-###  :
-rubrique
-  
-  
-###  >
-indentation de la ligne
-###  ?
+ 
+###  # titre et sous titre 
+de 1 à 3 crosillon marque les titres et sous titres
+ 
+###  | tableau
+chaque ligne est une ligne du tableau, chaque colonne est séparé par le caractère |
+exemple:
+>||colonne 1|colonne 2
+>|ligne 1||
+>|ligne 2||
+donnera:
+||colonne 1|colonne 2|ligne 1||||ligne 2||| 
+###  ! fichier multimédia 
+permet d'inserer un fichier dans le document,un navigateur qui ne supporte pas le type du fichier affichera un lien pour le télécharger
+exemple:
+>!texte alternatif|url du fichier 
+ 
+###  : rubrique/liens interne
+marque le début d'une rubrique 
+ 
+###  > indentation de la ligne
+ajoute une indentation au texte pour un peu plus de lisibilité
+ 
+###  ? caractere d'échapement
 on ignore le caractère de début de ligne (si on veux faire commencer une ligne par un caractère réservé)
-###  "
-paragraphe spécial(résumé, citations, extrais de code...) ,des indentations avec le symbole ? peuvent être ajouté a la suite  pour la mise en forme et on doit utiliser une police a chasse fixe 
+ 
+###  " paragraphe spécial
+résumé, citations, extrais de code...) ,des indentations avec le symbole ? peuvent être ajouté a la suite  pour la mise en forme et on doit utiliser une police a chasse fixe 
   
   
   
+ 
+ 
 ##  marque de mise en forme du texte 
 chaque caractère spécial encadre la zone concerné, si on as besoin d'afficher le caractère, on as simplement besoin de le répéter, un seul caractère sera affiché et aucune mise en forme spécifique sera appliqué
   
-###  ~ liens  
+ 
+###  \~ liens  
 exemple:
->~nom d'affichage|url~###  _ souligné
+>\~nom d'affichage|url\~
+donnera:
+>[nom d'affichage](url)
   
-  
-###  @ emphase
-  
-  
-  
-  
-*
 si il n'y as pas d'url, le nom d'affichage correspond a une sous rubrique du même document
 si l'url commence par # c'est une sous rubrique du même document
+  
+  
+  
+ 
+###  \_ souligné
+exemple:
+>\_texte souligné\_
+donnera:
+><ins>texte souligné</ins>
+  
+  
+ 
+###  \@ emphase
+exemple:
+>\@texte emphasé\@
+donnera:
+***texte emphasé***
+  
+  
+  
+  
+  
   
   
   

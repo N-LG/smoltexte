@@ -1,5 +1,8 @@
+ 
+ 
+ 
 # c'est quoi?
-le smoltexte est une syntaxe particulière du markdown que j'ai définis afin d'avoir une syntaxe simple pour écrire la documentation de mon projet de systeme d'exploitation SeaC
+le smoltexte est une syntaxe particulière du markdown que j'ai définis afin d'avoir une syntaxe simple pour écrire la documentation de mon projet de systeme d'exploitation [SeaC](https://github.com/N-LG/SEAC)
   
 sur ce dépot se trouve:
      *[la documentation du format](https://github.com/N-LG/smoltexte/blob/main/smoltexte.md)
@@ -7,6 +10,9 @@ sur ce dépot se trouve:
      *[un script python pour transformer du smoltexte en markdown](https://github.com/N-LG/smoltexte/blob/main/stx2md.py)
      *et pas grand chose de plus pour l'instant...
   
+ 
+ 
+ 
 # pourquoi???
   
 j'utilisait un format de fichier spécifique pour gérer la documentation et je souhaitai adopter un standard pour gérer la documentation, mes critères pour trouver Le bon:
@@ -18,5 +24,4 @@ j'utilisait un format de fichier spécifique pour gérer la documentation et je 
     * permet d'y inclure des images,son,video
   
 ne trouvant pas ce dont j'avait besoin j'ai définis cette syntaxe un peu particulière de markdown que je nomme le smoltexte en hommage au smolnet
-  
   
